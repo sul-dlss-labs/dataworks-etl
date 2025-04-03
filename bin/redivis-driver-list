@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Redivis.new(api_token: ENV.fetch('REDIVIS_API_TOKEN', nil), organization: 'StanfordPHS')
+
+results = client.list
+puts results
+puts results.size

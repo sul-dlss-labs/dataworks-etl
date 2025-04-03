@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Redivis.new(api_token: ENV.fetch('REDIVIS_API_TOKEN', nil), organization: 'StanfordPHS')
+
+# For example, 'stanfordphs.prime_india:016c:v0_1'
+puts JSON.pretty_generate(client.dataset(id: ARGV[0]))
