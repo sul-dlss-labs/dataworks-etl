@@ -23,3 +23,24 @@ REDIVIS_API_TOKEN=YOUR_TOKEN bin/redivis-driver-dataset stanfordphs.prime_india:
   "qualifiedReference": "stanfordphs.prime_india:016c:v0_1",
   ...
 ```
+
+### Dryad
+#### list
+```
+bin/dryad-driver-list
+#<struct Struct::ListResult id="doi:10.5061/dryad.bvq83bk8p", modified_token="3">
+...
+#<struct Struct::ListResult id="doi:10.5061/dryad.ncjsxkt0x", modified_token="4">
+585
+```
+
+#### dataset
+```
+bin/dryad-driver-dataset doi:10.5061/dryad.66t1g1jxs
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.66t1g1jxs"
+    },
+    ...
+```

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Dryad.new
+
+results = client.list(affiliation: 'https://ror.org/00f54p054')
+puts results
+puts results.size

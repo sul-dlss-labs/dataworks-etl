@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.summary     = 'DataWorks ETL'
   s.authors     = ['Justin Littman']
 
+  s.add_dependency 'activesupport'
   s.add_dependency 'faraday'
   s.add_dependency 'zeitwerk'
 

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Dryad.new
+
+# For example, 'doi:10.5061/dryad.66t1g1jxs'
+puts JSON.pretty_generate(client.dataset(id: ARGV[0]))
