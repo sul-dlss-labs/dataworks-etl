@@ -64,3 +64,24 @@ ZENODO_API_TOKEN=YOUR_TOKEN bin/zenodo-driver-dataset 4587658
   "id": 4587658,
   ...
 ```
+
+### Datacite
+#### list
+```
+bin/datacite-driver-list
+#<struct Struct::ListResult id="10.3886/e222521v2", modified_token="2025-03-27T09:03:37Z">
+...
+#<struct Struct::ListResult id="10.3886/e195641v1", modified_token="2025-04-02T14:22:32Z">
+8735
+```
+
+#### dataset
+```
+bin/datacite-driver-dataset 10.3886/e195641v1
+{
+  "data": {
+    "id": "10.3886/e195641v1",
+    "type": "dois",
+    "attributes": {
+      ...
+```

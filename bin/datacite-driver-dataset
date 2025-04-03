@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Datacite.new
+
+# For example, '10.3886/e195641v1'
+puts JSON.pretty_generate(client.dataset(id: ARGV[0]))
