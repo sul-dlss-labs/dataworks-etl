@@ -1,9 +1,15 @@
+plugins:
+  - rubocop-rspec
+  
 AllCops:
   TargetRubyVersion: 3.4
   DisplayCopNames: true
 
 Layout/LineLength:
   Max: 120
+
+RSpec/MultipleExpectations:
+  Enabled: false
 
 Gemspec/AddRuntimeDependency: # new in 1.65
   Enabled: true
