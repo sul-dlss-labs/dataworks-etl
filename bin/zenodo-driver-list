@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dataworks_etl'
+
+client = DataworksEtl::Clients::Zenodo.new(api_token: ENV.fetch('ZENODO_API_TOKEN'))
+
+results = client.list(affiliation: 'Stanford University')
+puts results
+puts results.size

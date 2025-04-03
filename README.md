@@ -44,3 +44,23 @@ bin/dryad-driver-dataset doi:10.5061/dryad.66t1g1jxs
     },
     ...
 ```
+
+### Zenodo
+#### list
+```
+ZENODO_API_TOKEN=YOUR_TOKEN bin/zenodo-driver-list
+#<struct Struct::ListResult id=4587658, modified_token="2">
+...
+#<struct Struct::ListResult id=7903643, modified_token="2">
+1355
+```
+
+#### dataset
+```
+ZENODO_API_TOKEN=YOUR_TOKEN bin/zenodo-driver-dataset 4587658
+{
+  "created": "2021-03-08T05:29:02.742589+00:00",
+  "modified": "2021-03-08T12:27:16.708117+00:00",
+  "id": 4587658,
+  ...
+```
